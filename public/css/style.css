@@ -1,0 +1,234 @@
+:root {
+    /* colors */
+    --yellow: #eac926;
+    --blue: #03264C;
+    --light_blue: #1259c3;
+    --dark-grey: #666;
+    --light-grey: #ebebeb;
+    --green: #39b54a;
+    /* Font */
+    --font-roboto: "Roboto", sans-serif;
+    /* Font sizes */
+    --paragraph : 12px;
+    --title: 24px;
+    --prices: 18px;
+    --discounts-descriptions: 16px;
+
+}
+
+/*GENERAL*/
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+a {
+color: black;
+text-decoration: none;
+}
+
+body {
+    font-family: var(--font-roboto);
+    background-color: var(--light-grey);
+}
+
+li {
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+/* HEADER */
+header {
+    background-color: var(--yellow);
+    font-size: var(--paragraph);
+    padding-bottom:10px;
+}
+
+header .burger-menu {
+    background-color: var(--light_blue);
+    color: white;
+    width: 15px;
+    padding: 7px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px auto 0; /*los elementos arriba mio tienen 10px automatico izquierda,derecha y el segundo tiene 0*/
+    /* top right bottom left (en el caso de que hay 4 parametros)*/
+    /* top right-left bottom (en el caso de que hay 3 parametros)*/
+
+}
+
+header .logo{
+    width: 130px;
+    margin-left: 25px;
+    padding-top: 25px;
+    margin-bottom: 10px;
+}
+
+.search {
+    border: 1px solid var(--dark-grey);
+    background-color: white;
+    padding: 5px 25px;
+    width: 60%;
+    border-radius: 5px;
+    color: grey;
+
+}
+
+
+/* Search bar */
+
+header .search-bar {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+/* Quota */
+header .quota{
+    margin:10px;
+}
+
+header nav ul#top-list{
+    margin-bottom: 15px;
+}
+
+/* END HEADER*/
+
+/* MAIN */
+main.home{
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* BANNER*/
+.home .banner{
+    padding:20px;
+}
+
+/* SECTION */
+.home .section.title {
+    margin: 25px 0;
+}
+
+.home .card{
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.home .card .card-content{
+    border-top: 1px solid var(--light-grey);
+    padding: 10px;
+    position: relative;
+}
+
+.home .card .card-content .icon-truck{
+    border: 1px solid var(--green);
+    border-radius: 50%;
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 5px;
+    position:absolute;
+    top: -15px;
+    right: 20px;
+}
+
+.home .card .card-content .icon-truck i{
+    color: var(--green);
+    font-size: 16px;
+}
+
+.home .card .card-content .product-info{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+
+.home .card .card-content .product-info p:nth-child(1){
+    flex-grow: 0.3;
+}
+
+.home .card .card-content .product-info p:nth-child(2){
+    color: var(--green);
+    font-size: 16px;
+    flex-grow: 0.7;
+}
+
+.home .card .card-content .product-name{
+    display: none;
+    color: var(--dark-grey);
+    font-size: 15px;
+    margin-top: 15px;
+
+}
+
+/* MEDIAQUIRES*/
+@media (min-width: 992px) {
+    .home .banner{
+        display: block;
+    }
+}
+
+/* tablet */
+
+@media (min-width: 361px) {
+
+    /* cards */
+    .home .card {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    
+    .home .card .card-content .product-name  {
+        display: block;
+    }
+    
+}
+
+/* desktop */
+@media (min-width: 769px) {
+    /* Header */
+    .burger-menu {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+}
+
+
+/* FOOTER */
+footer {
+    padding-top: 40px;
+}
+
+footer article{
+    margin-bottom: 40px;
+}
+
+footer article.footer-article {
+    text-align: center;
+}
+
+footer article.footer-article i{
+    color: var(--light_blue);
+    font-size: 32px;
+    margin-bottom: 15px;
+
+}
+
+footer article.footer-article h5{
+    font-size: 16px;
+}
+
+footer article.footer-article p{
+    font-size: 12px;
+    width: 77%;
+    margin: 0 auto;
+}
+
+footer .copy{
+    color: var(--dark-grey);
+    font-size: var(--paragraph);
+    margin: 0 0 10px 15px;
+}
